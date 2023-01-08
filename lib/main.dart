@@ -1,5 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:matcher/matcher.dart';
+import 'package:flutter_bloc_new/screen/product_list_screen.dart';
 
 void main() => runApp(MainApp());
 
@@ -10,7 +12,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return     Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Shop',
+      home: ProductListScreen(),
+    );
   }
 }
+
+
 
