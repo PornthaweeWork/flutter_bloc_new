@@ -23,7 +23,7 @@ class ProductBloc extends Bloc<MyEvent, MyState> {
       return;
     }
 
-    final json = jsonDecode(res.body) as List;
+    final json = jsonDecode(utf8.decode(res.bodyBytes)) as List;
     final products = json.map((e) => Product.fromJson(e)).toList();
     emit(GetProductsStateSuccess(products: products));
   }
